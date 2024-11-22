@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Post Test 01</title>
+    <style>
+      font {
+        transition: color 0.3s ease;
+      }
+
+      font:hover {
+        color: red;
+        cursor: pointer;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      table th,
+      table td {
+        border: 1px solid black;
+        padding: 10px;
+        text-align: left;
+      }
+
+      table tbody tr:hover {
+        background-color: #f0f8ff;
+        cursor: pointer;
+      }
+
+      #search-box {
+        margin-bottom: 20px;
+        display: flex;
+        gap: 10px;
+      }
+
+      #search-box input {
+        padding: 5px;
+        font-size: 16px;
+        width: 300px;
+      }
+
+      #search-box button {
+        padding: 5px 15px;
+        font-size: 16px;
+        cursor: pointer;
+      }
+    </style>
+  </head>
+  <body>
+    <font size="7" color="blue">Fakultas Ilmu Komputer</font> <br />
+    <font size="5" color="yellow" face="calibri">Universitas Kuningan</font>
+    <br />
+    Alamat: Jl. Pramuka No.67, Purwawinangun, Kec. Kuningan, Kabupaten Kuningan,
+    Jawa Barat 45512
+    <hr size="3" />
+    <main>
+      <div>
+        <article>
+          <img src="Logo_UniKu.png" alt="" width="200" height="200" />
+          <div><b>Visi</b></div>
+          Terwujudnya program studi sistem informasi sebagai program studi yang
+          handal dan unggul dalam penyelenggaraan Tri Dharma Perguruan Tinggi,
+          unggul di bidang rekayasa sistem informasi di Wilayah Jawa Barat pada
+          tahun 2023.
+          <p>
+            <div><b><i>PROFIL LULUSAN & PILIHAN KARIR</i></b></div> 
+            System Analyst, Data Analyst, Chief Information Officer (CIO),
+            Software Quality Assurance.</p>
+            <div><b><u>PROFIL PROGRAM STUDI FAKULTAS ILMU KOMPUTER</u></b></div>
+            <ul>
+              <li>Sistem Informasi S1</li>
+              <li>Teknik Informatika S1</li>
+              <li>Desain Komunikasi Visual S1</li>
+              <li>Teknik Sipil</li>
+              <li>Manajemen Informatika D3</li>
+            </ul>
+            <div><b><u>KEGIATAN MBKM</u></b></div>
+            <ul>
+              <li>Magang</li>
+              <li>Studi Independen</li>
+              <li>Bangkit Academy</li>
+              <li>Pertukaran Mahasiswa Merdeka (PPM) Nusantara</li>
+              <li>International Credit Transfer (ICT)</li>
+            </ul>
+              <div><b><u><i>PROGRAM UNGGULAN</i></u></b></div>
+              <ul type="square">
+                <li>Pertukaran Mahasiswa ke University Utara Malaysia (UMM)</li>
+                <li>Praktisi/Dosen Kompetensi dari Universitas Lain</li>
+              </ul>  
+            <div><strong>PRESTASI MAHASISWA</strong></div>
+              <ul type="circel">
+                <li>Juara 1 lomba Desain Cindramata 2018</li>
+                <li>Juara Favorit lomba poster STiKKU 2017</li>
+                <li>Mahasiswa Berprestasi UNIKU 2022</li>
+                <li>Duta Putra Sosial Kuningan 2022</li>
+                <li>Juara LIIDIKTI Konsep Garapan Terbaik Tingkat Jabar-Banten 2022</li>
+                <li>PPK Ormawa</li>
+              </ul>
+            </ul>
+          <div>
+            <b><u>PROFIL ALUMNI MAHASISWA</u></b>
+          </div>
+          <div id="search-box">
+            <input
+              type="text"
+              id="search-input"
+              placeholder="Cari nama atau jurusan..."
+            />
+            <button onclick="filterTable()">Cari</button>
+            <button onclick="resetTable()">Reset</button>
+          </div>
+          <table id="alumni-table" border="1" cellpadding="5" cellspacing="0">
+            <thead>
+              <tr>
+                <th>No</th>
+                <th>Nama</th>
+                <th>Angkatan</th>
+                <th>Pekerjaan</th>
+                <th>Jurusan</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>1</td>
+                <td>Ahmad Fauzi</td>
+                <td>2015</td>
+                <td>Software Developer</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>2</td>
+                <td>Siti Fatimah</td>
+                <td>2014</td>
+                <td>Data Analyst</td>
+                <td>Teknik Informatika</td>
+              </tr>
+              <tr>
+                <td>3</td>
+                <td>Budi Santoso</td>
+                <td>2013</td>
+                <td>System Analyst</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>4</td>
+                <td>Eka Rahmawati</td>
+                <td>2016</td>
+                <td>UI/UX Designer</td>
+                <td>Desain Komunikasi Visual</td>
+              </tr>
+              <tr>
+                <td>5</td>
+                <td>Rizky Maulana</td>
+                <td>2012</td>
+                <td>IT Consultant</td>
+                <td>Manajemen Informatika</td>
+              </tr>
+              <tr>
+                <td>6</td>
+                <td>Nur Aisyah</td>
+                <td>2017</td>
+                <td>Project Manager</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>7</td>
+                <td>Gilang Ramadhan</td>
+                <td>2018</td>
+                <td>Network Engineer</td>
+                <td>Teknik Informatika</td>
+              </tr>
+              <tr>
+                <td>8</td>
+                <td>Lina Marlina</td>
+                <td>2019</td>
+                <td>Digital Marketer</td>
+                <td>Desain Komunikasi Visual</td>
+              </tr>
+              <tr>
+                <td>9</td>
+                <td>Heri Susanto</td>
+                <td>2016</td>
+                <td>Database Administrator</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>10</td>
+                <td>Putri Andini</td>
+                <td>2017</td>
+                <td>Quality Assurance</td>
+                <td>Teknik Informatika</td>
+              </tr>
+              <tr>
+                <td>11</td>
+                <td>Ilham Pratama</td>
+                <td>2013</td>
+                <td>Security Engineer</td>
+                <td>Manajemen Informatika</td>
+              </tr>
+              <tr>
+                <td>12</td>
+                <td>Andi Firmansyah</td>
+                <td>2015</td>
+                <td>Backend Developer</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>13</td>
+                <td>Maria Simanjuntak</td>
+                <td>2014</td>
+                <td>Frontend Developer</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>14</td>
+                <td>Zahra Fadhilah</td>
+                <td>2019</td>
+                <td>IT Trainer</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>15</td>
+                <td>Agus Subekti</td>
+                <td>2012</td>
+                <td>Cloud Engineer</td>
+                <td>Teknik Informatika</td>
+              </tr>
+              <tr>
+                <td>16</td>
+                <td>Citra Permata</td>
+                <td>2015</td>
+                <td>Mobile App Developer</td>
+                <td>Manajemen Informatika</td>
+              </tr>
+              <tr>
+                <td>17</td>
+                <td>Taufik Hidayat</td>
+                <td>2013</td>
+                <td>DevOps Engineer</td>
+                <td>Teknik Informatika</td>
+              </tr>
+              <tr>
+                <td>18</td>
+                <td>Umi Lestari</td>
+                <td>2017</td>
+                <td>Technical Writer</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>19</td>
+                <td>Rina Salsabila</td>
+                <td>2016</td>
+                <td>Digital Content Creator</td>
+                <td>Desain Komunikasi Visual</td>
+              </tr>
+              <tr>
+                <td>20</td>
+                <td>Vina Salsabila</td>
+                <td>2018</td>
+                <td>Web Developer</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>21</td>
+                <td>Dedi Supriadi</td>
+                <td>2015</td>
+                <td>SEO Specialist</td>
+                <td>Desain Komunikasi Visual</td>
+              </tr>
+              <tr>
+                <td>22</td>
+                <td>Kiki Handayani</td>
+                <td>2014</td>
+                <td>IT Auditor</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>23</td>
+                <td>Oscar Wijaya</td>
+                <td>2013</td>
+                <td>Game Developer</td>
+                <td>Teknik Informatika</td>
+              </tr>
+              <tr>
+                <td>24</td>
+                <td>Fitri Hidayati</td>
+                <td>2017</td>
+                <td>Business Analyst</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>25</td>
+                <td>Tommy Wibowo</td>
+                <td>2018</td>
+                <td>Cybersecurity Specialist</td>
+                <td>Teknik Informatika</td>
+              </tr>
+              <tr>
+                <td>26</td>
+                <td>Wahyu Ramdani</td>
+                <td>2014</td>
+                <td>Scrum Master</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>27</td>
+                <td>Fajar Nugroho</td>
+                <td>2013</td>
+                <td>IT Support</td>
+                <td>Manajemen Informatika</td>
+              </tr>
+              <tr>
+                <td>28</td>
+                <td>Linda Agustina</td>
+                <td>2015</td>
+                <td>Software Engineer</td>
+                <td>Teknik Informatika</td>
+              </tr>
+              <tr>
+                <td>29</td>
+                <td>Bayu Pratama</td>
+                <td>2016</td>
+                <td>Product Manager</td>
+                <td>Sistem Informasi</td>
+              </tr>
+              <tr>
+                <td>30</td>
+                <td>Nanda Puspita</td>
+                <td>2019</td>
+                <td>Artificial Intelligence Engineer</td>
+                <td>Teknik Informatika</td>
+              </tr>
+            </tbody>
+          </table>
+          <br />
+          <div>SERTIFIKASI</div>
+          <img src="LOGO-PNG-BNSP.png" alt="" width="150" height="120" />
+        </article>
+      </div>
+    </main>
+    <script>
+      function filterTable() {
+        const input = document
+          .getElementById("search-input")
+          .value.toLowerCase();
+        const table = document.getElementById("alumni-table");
+        const rows = table.getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) {
+          const cells = rows[i].getElementsByTagName("td");
+          const name = cells[1].textContent.toLowerCase();
+          const major = cells[4].textContent.toLowerCase();
+
+          if (name.includes(input) || major.includes(input)) {
+            rows[i].style.display = "";
+          } else {
+            rows[i].style.display = "none";
+          }
+        }
+      }
+
+      function resetTable() {
+        const table = document.getElementById("alumni-table");
+        const rows = table.getElementsByTagName("tr");
+
+        for (let i = 1; i < rows.length; i++) {
+          rows[i].style.display = "";
+        }
+
+        document.getElementById("search-input").value = "";
+      }
+    </script>
+  </body>
+</html>
