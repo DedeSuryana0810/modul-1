@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galeri Foto Alumni UNIKU</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+      }
+
+      h1 {
+        text-align: center;
+        color: #4caf50;
+      }
+
+      .gallery {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 10px;
+        justify-content: center;
+      }
+
+      .gallery img {
+        width: 150px;
+        height: 150px;
+        object-fit: cover;
+        border: 2px solid #ccc;
+        border-radius: 5px;
+        cursor: pointer;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+      }
+
+      .modal {
+        display: none;
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background: white;
+        border-radius: 10px;
+        padding: 10px;
+        max-width: 80%;
+        max-height: 80%;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+        z-index: 1000;
+        text-align: center;
+      }
+
+      .modal .close {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        background: red;
+        color: white;
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      .modal img {
+        width: 100%;
+        height: auto;
+        display: block;
+        margin: 0 auto;
+      }
+
+      .modal-content {
+        position: relative;
+        background: white;
+        padding: 20px;
+        border-radius: 10px;
+        max-width: 80%;
+        text-align: center;
+      }
+
+      .modal-content img {
+        max-width: 80%;
+        max-height: 80%;
+        object-fit: contain;
+        border-radius: 10px;
+      }
+
+      .modal-content button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        padding: 5px 10px;
+        background-color: #f44336;
+        color: white;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      .modal-content button:hover {
+        background-color: #d32f2f;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Galeri Foto Alumni UNIKU</h1>
+
+    <!-- Galeri -->
+    <div class="gallery">
+      <img src="alumni1.jpeg" alt="Foto Alumni 1" />
+      <img src="alumni2.jpg" alt="Foto Alumni 2" />
+      <img src="alumni3.jpg" alt="Foto Alumni 3" />
+      <img src="alumni4.png" alt="Foto Alumni 4" />
+      <img src="alumni5.jpg" alt="Foto Alumni 5" />
+      <img src="alumni6.jpg" alt="Foto Alumni 6" />
+    </div>
+
+    <!-- Modal -->
+    <div class="modal">
+      <div class="modal-content">
+        <button id="closeModal">Close</button>
+        <img src="" alt="Foto Alumni" id="modalImage" />
+      </div>
+    </div>
+
+    <!-- Include jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="gallery.js"></script>
+  </body>
+</html>
